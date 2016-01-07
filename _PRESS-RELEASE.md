@@ -17,29 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  The best to do app ever!
-  George was here.
+  Jaguar Task
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Your To-Do list, but shareable and fun.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+   Use Jaguar Task to make lists of the things you need to do, share them with the right people, and level up your character as you get more stuff done.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  It is hard or impossible to share most to-do lists or sub-lists with other people. Also, to-do lists are generally boring or associated with dread.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  Jaguar Task lets you email a list, sub-list, or single task to another person. That person just clicks a link that takes them to our web app where they can interact with the list themselves. Also, the more you accomplish on your to-do list, the more points you get to level up your profile.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  "You may find yourself wishing people asked you to do more stuff", says project manager Gabriel Meyr.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  Get started by signing in on the homepage, and then just typing out your first list.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "It's great because now my wife and I can share shopping lists with each other when one of us is at the store."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  Your stuff needs to get done, but it doesn't have to be on your own, and it doesn't have to be boring. Level up the way you get things done with Jaguar Task.
