@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jaguartask/jaguartask/issues"
   },
-  "homepage": "https://github.com/jaguartask/jaguartask#_README.md"
+  "homepage": "https://github.com/jaguartask/jaguartask#_README.md",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
