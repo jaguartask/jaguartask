@@ -1,0 +1,19 @@
+{
+  "name": "jaguartask",
+  "version": "1.0.0",
+  "description": "Social to-do list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaguartask/jaguartask.git"
+  },
+  "author": "The Jaguar Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaguartask/jaguartask/issues"
+  },
+  "homepage": "https://github.com/jaguartask/jaguartask#_README.md"
+}
