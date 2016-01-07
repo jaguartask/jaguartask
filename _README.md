@@ -39,23 +39,25 @@ __Deleting A List__
 Click the "Delete List" button when viewing a list to delete the list. You can delete individual tasks from either the list view page or the task view page by clicking the "X" in the top-right corner of the task.
 
 ## API Endpoints
-/task_lists __GET__ - return a collection of task lists with IDs and names, but not too much other information
-/task_lists __POST__ - create a new task list
-/task_lists/:id __GET__ - return task list object for specific ID
-/task_lists/:id __PUT__ - update a task list for specific ID
-/task_lists/:id __DELETE__ - delete a task list for specific ID
-/task_lists/:id/tasks __GET__ - returns a all tasks associated with that list ID
-/task __GET__ - return a collection of all tasks (IDs and names, not much else)
-/task __POST__ - create new task
-/task/:id __GET__ - return task object for specific ID
-/task/:id __PUT__ - update a task for specific ID
-/task/:id __DELETE__ - delete a task for specific ID
-/users __GET__ - return a collection of users (IDs and names, not too much info)
-/users __POST__ - create a new user
-/users/:id __GET__ - return user object for specific ID
-/users/:id __PUT__ - update a user for specific ID
-/users/:id __DELETE__ - delete a user for specific ID
-/users/:id/task_lists __GET__ - return a task  list for a specific user (task IDs and names)
+__END POINT__ | __HTTP METHOD__ | __WHAT IT DOES__
+| ----------- | --------------- | ---------------- |
+/task_lists | GET | return a collection of task lists with IDs and names, but not too much other information
+/task_lists | POST| create a new task list
+/task_lists/:id | GET| return task list object for specific ID
+/task_lists/:id | PUT| update a task list for specific ID
+/task_lists/:id | DELETE| delete a task list for specific ID
+/task_lists/:id/tasks | GET| returns a all tasks associated with that list ID
+/task | GET| return a collection of all tasks (IDs and names, not much else)
+/task | POST| create new task
+/task/:id | GET| return task object for specific ID
+/task/:id | PUT| update a task for specific ID
+/task/:id | DELETE| delete a task for specific ID
+/users | GET| return a collection of users (IDs and names, not too much info)
+/users | POST| create a new user
+/users/:id | GET| return user object for specific ID
+/users/:id | PUT| update a user for specific ID
+/users/:id | DELETE| delete a user for specific ID
+/users/:id/task_lists | GET| return a task  list for a specific user (task IDs and names)
 
 ## Requirements
 
