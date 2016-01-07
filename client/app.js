@@ -4,12 +4,15 @@ angular.module('jaguarTask', [
 ])
 .config(function($stateProvider, $urlRouterProvider) {
 	//illegal path return to homepage
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/index');
 
   $stateProvider
   	.state('homepage', {
     	url: '/',
     	templateUrl: 'home/home-partial.html',
     	controller: 'HomePageController'
+  	})
+  	.state('homepage.index', {
+  		url: '/'
   	})
 });
