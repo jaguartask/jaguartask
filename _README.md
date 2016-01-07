@@ -10,7 +10,6 @@ Number Two!
   - __Scrum Master__: teamMember
   - __Development Team Members__: teamMember, teamMember
 
-## Table of Contents
 
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
