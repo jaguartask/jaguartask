@@ -1,6 +1,11 @@
 var express = require('express');
+var mongoose = require('mongoose');
 var app = express();
 
-app.get('/', function(req, res) {
-   res.send('Hello World');
-}).listen(8000);
+//mongoose.connect('mongodb://localhost/tacocat');
+
+require('./config/middleware.js')(app, express);
+
+app.listen(8000);
+
+module.exports = app;
