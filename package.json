@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jaguartask/jaguartask#_README.md",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4"
   }
 }
