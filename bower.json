@@ -1,0 +1,33 @@
+{
+  "name": "jaguartask",
+  "description": "Social to-do list",
+  "main": "./server/server.js",
+  "authors": [
+    "abouzol-GNA",
+    "GMeyr",
+    "wunderg",
+    "imrokas"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "to",
+    "do",
+    "app",
+    "social"
+  ],
+  "homepage": "https://github.com/jaguartask/jaguartask",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6"
+  }
+}
