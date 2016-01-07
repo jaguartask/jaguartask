@@ -4,7 +4,9 @@
   "description": "Social to-do list",
   "main": "./server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js"
+
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,12 @@
     "express": "^4.13.3",
     "mongoose": "^4.3.4",
     "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "gulp": "^3.9.0",
+    "gulp-if": "^2.0.0",
+    "gulp-shell": "^0.5.1",
+    "nodemon": "^1.8.1"
   }
 }
