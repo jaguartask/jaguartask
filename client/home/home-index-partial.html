@@ -10,8 +10,11 @@
       <div class="list">
         <h2>{{ currentListData.name }}</h2>
         <div class="task">
-          <div class="taskName" ng-repeat="x in ">
-            {{ currentListData.tasks }}
+        <script> console.log(currentListData.tasks)</script>
+          <div class="taskName" >
+            <ul>
+              <li> {{ currentListData.tasks }} </li>
+            </ul>
           </div>
         </div>
       </div>
