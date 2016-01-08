@@ -19,22 +19,24 @@ module.exports = {
       password: password
     };
 
-
     console.log('line 22');
     User.findOne({username: username}).exec()
-     .then(function(user) {
-       if (user) {
-         console.log('userExists');
-         // console.log(user);
-         res.sendStatus(200)
-       } else { 
-         new User(newUser).save();
-      }
-     })
-     .then(null, function(err) {
-       console.log(err);
-        res.send(200);
+      .then(function(user) {
+        if (user) {
+          console.log('userExists');
+          // console.log(user);
+          res.sendStatus(200)
+        } else {
+          new User(newUser).save()
+      .then(function() {
+              res.sendStatus(200);
+          });
+        }
       })
+    .then(null, function(err) {
+      console.log(err);
+      res.send(200);
+    })
       // .then(function(user) {
       //   if(user) {
       //     console.log('user Exist');
