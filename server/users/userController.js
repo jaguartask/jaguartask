@@ -13,6 +13,7 @@ module.exports = {
   },
 
   signup: function(req, res, next){
+    console.log(req);
     var username = req.body.username;
     var password = req.body.password;
     var create;
@@ -21,11 +22,11 @@ module.exports = {
     var findUser = promise.bind(User.findUser, User);
 
     create = promise.bind(User.create, User);
+
     newUser = {
       username: username,
       password: password
     };
     return create(newUser);
-  },
-
+  }
 };
