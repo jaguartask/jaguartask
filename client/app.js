@@ -27,4 +27,9 @@ angular.module('jaguarTask', [
       url: '/register',
       templateUrl: 'home/home-register-partial.html'
     })
+})
+.run(function($rootScope){
+    $rootScope.$on('$viewContentLoaded', function(event, next) {
+        componentHandler.upgradeAllRegistered();
+    });
 });
