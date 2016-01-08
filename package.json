@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jaguartask/jaguartask#_README.md",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "bluebird": "^3.1.1",
     "body-parser": "^1.14.2",
     "bower": "^1.7.2",
