@@ -1,6 +1,7 @@
 angular.module('jaguarTask', [
 	'ui.router',
 	'jaguarTask.home',
+  'jaguarTask.main'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
 	
@@ -26,6 +27,11 @@ angular.module('jaguarTask', [
     .state('homepage.register', {
       url: '/register',
       templateUrl: 'home/home-register-partial.html'
+    })
+    .state('main', {
+      url: '/main',
+      templateUrl: 'main/main.html',
+      controller: 'MainController'
     })
 })
 .run(function($rootScope){
