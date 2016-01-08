@@ -22,6 +22,7 @@ UserSchema.pre('save', function(next) {
   if(!user.isModified('password')) return next();
 
   bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt){
+
     bcrypt.hash(user.password, salt, function(err, hash) {
       if(err) return next(err);
       user.password = hash;
@@ -39,5 +40,6 @@ UserSchema.pre('save', function(next) {
       cb(null, isMatch);
     });
   };
+
 
 module.exports = mongoose.model('users', UserSchema);
