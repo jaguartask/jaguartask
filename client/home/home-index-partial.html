@@ -1,25 +1,30 @@
-    <div class="container">
+<div class="mdl-grid mdl-typography--text-center">
+	<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+  	<h1>JaguarTask</h1>
+  	<p class="mdl-typography--headline">A new way to organize your task-lists, and share them amongst the family, friends or colleagues.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <hr id="about">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+  	<h2>About JaguarTask</h2>
+  	<p class="mdl-typography--headline">A new way to organize your task-lists, and share them amongst the family, friends or colleagues.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <hr id="team">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+  	<h2>Team JaguarTask</h2>
+  	<p class="mdl-typography--headline">A new way to organize your task-lists, and share them amongst the family, friends or colleagues.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <hr id="contact">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+  	<h2>Contact JaguarTask</h2>
+  	<p class="mdl-typography--headline">A new way to organize your task-lists, and share them amongst the family, friends or colleagues.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+</div>
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>List View</h1>
-        <a class="btn btn-default" href="#" role="button">Create List</a>
-        <a class="btn btn-default" href="#" role="button">Share List</a>
-        <a class="btn btn-default" href="#" role="button">Delete List</a>
-      </div>
-      <div class="list">
-        <h2>{{ currentListData.name }}</h2>
-        <div class="task">
-          <div class="taskName" >
-            <ul>
-              <li ng-repeat="task in currentListData.tasks">
-                <h3>{{ task .name}}</h3>
-                <div ng-repeat="key in basicTaskKeys">
-                  {{ key }} : {{ task[key] }}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- /container -->
