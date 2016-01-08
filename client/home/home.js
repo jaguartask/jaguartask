@@ -1,6 +1,6 @@
 angular.module('jaguarTask.home', [])
 
-.controller('HomePageController', function(){
+.controller('HomePageController', function($scope){
 	$scope.dummyData = [
     {
       id: 1,
@@ -36,6 +36,6 @@ angular.module('jaguarTask.home', [])
       }
       ]
     }];
-  $scope.currentListData = dummyData[0];
+  $scope.currentListData = $scope.dummyData[0];
   
 });
