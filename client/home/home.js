@@ -36,6 +36,7 @@ angular.module('jaguarTask.home', [])
       }
       ]
     }];
-  $scope.currentListData = $scope.dummyData[0];
+  $scope.currentListData = $scope.dummyData[1];
+  $scope.basicTaskKeys = ["name", "done", "dueDate", "priority"];
   
 });

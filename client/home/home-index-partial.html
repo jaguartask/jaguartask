@@ -10,10 +10,13 @@
       <div class="list">
         <h2>{{ currentListData.name }}</h2>
         <div class="task">
-        <script> console.log(currentListData.tasks)</script>
           <div class="taskName" >
             <ul>
-              <li> {{ currentListData.tasks }} </li>
+              <li ng-repeat="task in currentListData.tasks">
+                {{ task }}
+                <div ng-repeat="key in basicTaskKeys">
+                  {{ key }} : {{ task[key] }}
+              </li>
             </ul>
           </div>
         </div>
