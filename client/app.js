@@ -33,6 +33,11 @@ angular.module('jaguarTask', [
       templateUrl: 'main/main.html',
       controller: 'MainController'
     })
+    .state('list', {//'main.list'
+      url: '/list',
+      templateUrl: 'fullList/fullList.html',
+      controller: 'listController'
+    })
 })
 .run(function($rootScope){
     $rootScope.$on('$viewContentLoaded', function(event, next) {
