@@ -2,8 +2,24 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <h1>List View</h1>
+        <a class="btn btn-default" href="#" role="button">Create List</a>
+        <a class="btn btn-default" href="#" role="button">Share List</a>
+        <a class="btn btn-default" href="#" role="button">Delete List</a>
+      </div>
+      <div class="list">
+        <h2>{{ currentListData.name }}</h2>
+        <div class="task">
+          <div class="taskName" >
+            <ul>
+              <li ng-repeat="task in currentListData.tasks">
+                <h3>{{ task .name}}</h3>
+                <div ng-repeat="key in basicTaskKeys">
+                  {{ key }} : {{ task[key] }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div> <!-- /container -->
