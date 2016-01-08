@@ -25,7 +25,7 @@ module.exports = {
         if (user) {
           console.log('userExists');
           // console.log(user);
-          res.sendStatus(200)
+          res.sendStatus(200);
         } else {
           new User(newUser).save()
       .then(function() {
@@ -36,7 +36,7 @@ module.exports = {
     .then(null, function(err) {
       console.log(err);
       res.send(200);
-    })
+    });
       // .then(function(user) {
       //   if(user) {
       //     console.log('user Exist');
