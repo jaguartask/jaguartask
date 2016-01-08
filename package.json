@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/jaguartask/jaguartask#_README.md",
   "dependencies": {
+    "bower": "^1.7.2",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "mongoose": "^4.3.4",
     "morgan": "^1.6.1"
   },
   "devDependencies": {
-    "bower": "^1.7.2",
     "browser-sync": "^2.11.0",
     "gulp": "^3.9.0",
     "gulp-if": "^2.0.0",
@@ -33,3 +33,4 @@
     "nodemon": "^1.8.1"
   }
 }
+
