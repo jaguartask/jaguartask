@@ -12,10 +12,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#/home/index">Home</a></li>
+            <li><a href="#/home/index#about">About</a></li>
+            <li><a href="#/home/index#team">Team</a></li>
+            <li><a href="#/home/index#contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav pull-right">
             <li><a ui-sref=".login">Login</a></li>
@@ -25,7 +25,9 @@
       </div>
     </nav>
     
-    <div ui-view></div>
+    <div class="main">
+      <div ui-view></div>
+    </div>
 
     <hr>
     <footer>
