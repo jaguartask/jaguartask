@@ -2,7 +2,9 @@ angular.module('jaguarTask', [
 	'ui.router',
 	'jaguarTask.home',
   'jaguarTask.main',
-  'jaguarTask.list'
+  'jaguarTask.list',
+  'jaguarTask.login',
+  'jaguarTask.register',
 ])
 .config(function($stateProvider, $urlRouterProvider) {
 	
@@ -23,11 +25,13 @@ angular.module('jaguarTask', [
   	})
     .state('homepage.login', {
       url: '/login',
-      templateUrl: 'home/home-login-partial.html'
+      templateUrl: 'login/login-partial.html',
+      controller: 'LoginController',
     })
     .state('homepage.register', {
       url: '/register',
-      templateUrl: 'home/home-register-partial.html'
+      templateUrl: 'register/register-partial.html',
+      controller: 'RegisterController',
     })
     .state('main', {
       url: '/main',
