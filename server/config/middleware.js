@@ -13,10 +13,12 @@ module.exports = function(app, express){
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
 
-  app.post('/', function(req, res) {
-    res.json({loggedin: true})
-  })
+  app.use('/api/user/', userRouter);
+  // app.use('/singin', userRouter);
+  // app.post('/', function(req, res) {
+  //   res.json({loggedin: true})
+  // })
 
-  // require('../users/userRoutes.js')(userRouter);
+  require('../users/userRoutes.js')(userRouter);
 
 };

@@ -1,11 +1,9 @@
 var User = require('./userModel.js');
 var promise = require('bluebird');
 
-
-
-
 module.exports = {
   signin: function(req, res, next){
+    console.log(req);
     var username = req.body.username;
     var password = req.body.password;
 
