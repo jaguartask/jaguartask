@@ -14,21 +14,25 @@ module.exports = {
     // console.log(req);
     var username = req.body.username;
     var password = req.body.password;
-    var newUser;
-    User.findOne(username).exec()
+    var newUser = {
+      username: username,
+      password: password
+    };
+
+
+    console.log('line 22');
+    User.findOne({username: username}).exec()
      .then(function(user) {
        if (user) {
          console.log('userExists');
-         console.log(user);
+         // console.log(user);
+         res.sendStatus(200)
        } else { 
-         newUser = {
-           username: username,
-           password: password
-         };
-         var user = User(newUser).save();
+         new User(newUser).save();
       }
      })
-      .then(null, function(err) {
+     .then(null, function(err) {
+       console.log(err);
         res.send(200);
       })
       // .then(function(user) {
