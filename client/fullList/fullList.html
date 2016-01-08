@@ -16,18 +16,16 @@
 
 
   <div class="list">
-    <a class="mdl-navigation__link" ui-sref="list"><h2>{{ currentListData.name }}</h2></a>
-    <div class="task">
+    <h2>{{ list.name }}</h2>
       <div class="taskName" >
         <ul>
-          <li ng-repeat="task in currentListData.tasks">
-            <h3>{{ task .name}}</h3>
+          <li ng-repeat="task in list.tasks">
+            <h3>{{ task.name}}</h3>
             <div ng-repeat="key in basicTaskKeys">
               {{ key }} : {{ task[key] }}
           </li>
         </ul>
       </div>
-    </div>
   </div>
 
 </div> <!-- /container -->
