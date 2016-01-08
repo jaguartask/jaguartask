@@ -1,7 +1,8 @@
 angular.module('jaguarTask', [
 	'ui.router',
 	'jaguarTask.home',
-  'jaguarTask.main'
+  'jaguarTask.main',
+  'jaguarTask.list'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
 	
