@@ -28,6 +28,8 @@
   "dependencies": {
     "angular-ui-router": "~0.2.15",
     "angular": "~1.4.8",
-    "material-design-lite": "~1.0.6"
+    "material-design-lite": "~1.0.6",
+    "a0-angular-storage": "~0.0.13",
+    "angular-jwt": "~0.0.9"
   }
 }
