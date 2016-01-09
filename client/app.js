@@ -1,12 +1,14 @@
 angular.module('jaguarTask', [
 	'ui.router',
+  'angular-jwt',
+  'angular-storage',
 	'jaguarTask.home',
   'jaguarTask.main',
   'jaguarTask.list',
   'jaguarTask.login',
   'jaguarTask.register',
 ])
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
 	
   $urlRouterProvider.when('', '/home/index');
   $urlRouterProvider.when('/', '/home/index');
@@ -36,16 +38,37 @@ angular.module('jaguarTask', [
     .state('main', {
       url: '/main',
       templateUrl: 'main/main.html',
-      controller: 'MainController'
+      controller: 'MainController',
+      data: {
+        requiresLogin: true //set to false to make route accessible to everyone
+      }
     })
     .state('list', {//'main.list'
       url: '/list',
       templateUrl: 'fullList/fullList.html',
-      controller: 'listController'
-    })
+      controller: 'listController',
+      data: {
+        requiresLogin: true //set to false to make route accessible to everyone
+      }
+    });
+
+  // gets jwt token from local storage
+  jwtInterceptorProvider.tokenGetter = function(store) {
+    return store.get('jwt');
+  }
+
+  $httpProvider.interceptors.push('jwtInterceptor');
 })
-.run(function($rootScope){
+.run(function($rootScope, $state, store, jwtHelper){
     $rootScope.$on('$viewContentLoaded', function(event, next) {
-        componentHandler.upgradeAllRegistered();
+      componentHandler.upgradeAllRegistered();
+    });
+    $rootScope.$on('$stateChangeStart', function(e, to) {
+      if (to.data && to.data.requiresLogin) {
+        if (!store.get('jwt') || jwtHelper.isTokenExpired(store.get('jwt'))) {
+          e.preventDefault();
+          $state.go('homepage.login');
+        }
+      }
     });
 });
