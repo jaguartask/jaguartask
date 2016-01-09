@@ -3,11 +3,26 @@ var Promise = require('bluebird');
 
 module.exports = {
   signin: function(req, res, next){
-    console.log(req);
     var username = req.body.username;
     var password = req.body.password;
 
-    var findUser = promise.bind(User.findOne, User);
+    User.findOne({username: username}).exec()
+      .then(function(user) {
+        if (user) {
+          user.comparePassword(password, function(err, result) {
+            if(result) {
+              res.json({autorized: true});
+            } else {
+              res.json({invalid: true});
+            }
+          })
+        } else {
+          res.json({userExists: false});
+        }
+      })
+      .then(null, function(err) {
+        console.log(err);
+      })
   },
 
   signup: function(req, res, next){
