@@ -11,23 +11,21 @@ module.exports = {
 
   save: function(req, res, next){
 
-    var task = {
+    var task = new Task({
       user: req.body.username,
       title: req.body.title,
       // notes: req.body.notes,
       done: req.body.done,
       // dueDate: req.body.dueDate,
       // priority: req.body.priority
-    };
-
-
-     var toSave = new Task.save(task)
+    })
+    .save()
       .then(function(result) {
         console.log('result :', result);
       })
       .then(null, function(err) {
         console.log("err");
-      })
+      });
   },
 
   delete: function(req, res, next){
