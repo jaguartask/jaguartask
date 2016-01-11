@@ -3,6 +3,7 @@ var Promise = require('bluebird');
 
 module.exports = {
   signin: function(req, res, next){
+    console.log("value");
     var username = req.body.username;
     var password = req.body.password;
 

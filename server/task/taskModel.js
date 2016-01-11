@@ -17,10 +17,6 @@ var taskSchema = new mongoose.Schema({
     required:true
   },
 
-  created:{
-    type: Date,
-    required: true
-  },
 
   dueDate:{
     type: Date,
@@ -29,7 +25,7 @@ var taskSchema = new mongoose.Schema({
 
   priority:{
     type: String,
-    required: true
+    required: false
   },
 
   user:{
@@ -39,7 +35,11 @@ var taskSchema = new mongoose.Schema({
 
   lists:{
     type: Array,
-    required:true
+    required: false
+  }
+}, {timestamp : {
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
   }
 });
 
