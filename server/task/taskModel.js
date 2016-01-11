@@ -4,44 +4,44 @@ var taskSchema = new mongoose.Schema({
 
   title: {
     type: String,
-    required: true,
+    required: true
   },
 
   notes: {
     type: String,
-    required: false,
+    required: false
   },
 
   done:{
     type: Boolean,
-    required:true,
+    required:true
   },
 
   created:{
     type: Date,
-    required: true,
+    required: true
   },
 
   dueDate:{
     type: Date,
-    required: false,
+    required: false
   },
 
   priority:{
     type: String,
-    required: true,
+    required: true
   },
 
   user:{
     type: Array,
-    required: true,
+    required: true
   },
 
   lists:{
     type: Array,
-    required:true,
-  },
-
-
-
+    required:true
+  }
 });
+
+
+module.exports = mongoose.model('task', taskSchema);
