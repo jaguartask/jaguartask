@@ -7,11 +7,13 @@ angular.module('jaguarTask', [
   'jaguarTask.list',
   'jaguarTask.login',
   'jaguarTask.register',
+  'jaguarTask.jtapp'
 ])
 .config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
 	
   $urlRouterProvider.when('', '/home/index');
   $urlRouterProvider.when('/', '/home/index');
+  $urlRouterProvider.when('/app', '/app/main');
   //unmatch path return to homepage
   $urlRouterProvider.otherwise('/home/index');
 
@@ -35,26 +37,26 @@ angular.module('jaguarTask', [
       templateUrl: 'register/register-partial.html',
       controller: 'RegisterController',
     })
-    .state('main', {
-      url: '/main',
-      templateUrl: 'main/main.html',
-      controller: 'MainController',
-      data: {
-        requiresLogin: true //set to false to make route accessible to everyone
-      }
-    })
-    .state('list', {//'main.list'
-      url: '/list',
-      templateUrl: 'fullList/fullList.html',
-      controller: 'listController',
-      data: {
-        requiresLogin: true //set to false to make route accessible to everyone
-      }
-    })
     .state('app', {
       url: '/app',
       templateUrl: 'jtapp/jtapp-partial.html',
       controller: 'AppPageController',
+      data: {
+        requiresLogin: false //set to false to make route accessible to everyone
+      }
+    })
+    .state('app.main', {
+      url: '/main',
+      templateUrl: 'main/main.html',
+      controller: 'MainController',
+      data: {
+        requiresLogin: false //set to false to make route accessible to everyone
+      }
+    })
+    .state('app.list', {//'main.list'
+      url: '/list',
+      templateUrl: 'fullList/fullList.html',
+      controller: 'listController',
       data: {
         requiresLogin: false //set to false to make route accessible to everyone
       }
