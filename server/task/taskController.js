@@ -16,16 +16,18 @@ module.exports = {
       title: req.body.title,
       // notes: req.body.notes,
       done: req.body.done,
+      listId: 5
       // dueDate: req.body.dueDate,
       // priority: req.body.priority
+      // list: id
     })
-    .save()
+      .save()
       .then(function(result) {
-        console.log('result :', result);
+        console.log(result);
       })
       .then(null, function(err) {
-        console.log("err");
-      });
+        console.log("err :", err);
+      })
   },
 
   delete: function(req, res, next){

@@ -5,5 +5,4 @@ module.exports = function(app){
 
   app.get('/', taskController.get);
 
-
 };
