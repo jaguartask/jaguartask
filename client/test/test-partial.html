@@ -3,7 +3,7 @@
 	<button ng-click="createList(listName)">Create</button>
 </div>
 <ul>
-	<li ng-repeat="list in lists"><span ng-click="displayTasks($index)">{{list.name}}</span><span ng-click="deleteList($index)">   [delete]</span></li>
+	<li ng-repeat="list in lists"><span ng-click="displayTasks($index)">{{list.name}}</span><span ng-click="deleteList($index)">   [delete]</span> <span ng-click="editList($index)">   [edit]</span></li>
 </ul>
 <hr />
 <h1> Tasks list <span ng-show="tasks">: {{tasks.name}}</span></h1>
