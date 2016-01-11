@@ -76,6 +76,10 @@
   font-size: 20px;
 }
 
+.checkboxImg {
+  height: 30px;
+  width: 30px;
+}
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }

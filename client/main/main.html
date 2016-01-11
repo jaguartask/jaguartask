@@ -21,13 +21,25 @@
       <div class="taskName" >
         <ul>
           <li ng-repeat="task in currentListData.tasks">
-            <h3>{{ task .name}}</h3>
-            <div ng-repeat="key in basicTaskKeys">
-              {{ key }} : {{ task[key] }}
+            <div class="taskBody">
+              <div>
+                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">{{ task .name}}</span>
+                </label>
+                </div>
+              <div class="taskInfo">
+                <div ng-repeat="key in basicTaskKeys">
+                  {{ key }} : {{ task[key] }}
+              </div>
           </li>
         </ul>
       </div>
     </div>
   </div>
+  <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+  <span class="mdl-checkbox__label">Enable AutoSave</span>
+</label>
 
 </div> <!-- /container -->
