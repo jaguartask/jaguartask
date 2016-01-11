@@ -1,4 +1,5 @@
-var list = require('./taskListModel.js');
+var List = require('./taskListModel.js');
+var Task = require('../');
 
 module.exports = {
 
