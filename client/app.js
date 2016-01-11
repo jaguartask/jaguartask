@@ -7,7 +7,7 @@ angular.module('jaguarTask', [
   'jaguarTask.list',
   'jaguarTask.login',
   'jaguarTask.jtapp',
-  'jaguarTask.test'
+  'jaguarTask.test',
   'jaguarTask.task',
   'jaguarTask.register'
 ])

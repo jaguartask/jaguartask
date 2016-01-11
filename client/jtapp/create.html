@@ -1,0 +1,20 @@
+<form>
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="user">List name: </label>
+    <input class="mdl-textfield__input" ng-model="newTodo" type="text" id="listName">
+  </div>
+  <br>
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="user">Details: </label>
+    <input class="mdl-textfield__input" ng-model="newTodoDetails" type="text" id="details">
+  </div>  <br>
+  <label for="radio1" class="mdl-radio mdl-js-radio">
+  Priority: 
+    <input type="radio" id="radioLow" name="priority" value="on" class="mdl-radio__button">
+    <span class="mdl-radio__label">Low</span>
+  </label>
+  <label for="radio1" class="mdl-radio mdl-js-radio">
+    <input type="radio" id="radioHigh" name="priority" value="off" class="mdl-radio__button">
+    <span class="mdl-radio__label">High</span>
+  </label>
+</form>
