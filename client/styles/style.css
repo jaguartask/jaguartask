@@ -91,3 +91,6 @@ html, body {
 .listView {
   margin: 70px;
 }
+ul {
+    list-style-type: none;
+}
