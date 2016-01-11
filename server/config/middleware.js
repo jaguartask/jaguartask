@@ -15,12 +15,12 @@ module.exports = function(app, express){
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
 
-  app.use('/api/task/', taskRouter);
-  app.use('/api/user/', userRouter);
+  app.use('/api/task', taskRouter);
+  app.use('/api/user', userRouter);
   app.use('/api/taskList', listRouter);
-  
+
   require('../task/taskRoutes.js')(taskRouter);
   require('../users/userRoutes.js')(userRouter);
-  require('../taskList/taskRoutes.js')(listRouter);
+  require('../taskList/taskListRoutes.js')(listRouter);
 
 };
