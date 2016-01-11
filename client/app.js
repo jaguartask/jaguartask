@@ -7,7 +7,8 @@ angular.module('jaguarTask', [
   'jaguarTask.list',
   'jaguarTask.login',
   'jaguarTask.register',
-  'jaguarTask.jtapp'
+  'jaguarTask.jtapp',
+  'jaguarTask.test'
 ])
 .config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
 	
@@ -57,6 +58,14 @@ angular.module('jaguarTask', [
       url: '/list',
       templateUrl: 'fullList/fullList.html',
       controller: 'listController',
+      data: {
+        requiresLogin: false //set to false to make route accessible to everyone
+      }
+    })
+    .state('app.test', {//'main.list'
+      url: '/test',
+      templateUrl: 'test/test-partial.html',
+      controller: 'testController',
       data: {
         requiresLogin: false //set to false to make route accessible to everyone
       }
