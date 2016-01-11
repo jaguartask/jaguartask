@@ -18,16 +18,9 @@ module.exports = function(app, express){
   app.use('/api/task', taskRouter);
   app.use('/api/user', userRouter);
   app.use('/api/taskList', listRouter);
-<<<<<<< HEAD
 
   require('../task/taskRoutes.js')(taskRouter);
   require('../users/userRoutes.js')(userRouter);
   require('../taskList/taskListRoutes.js')(listRouter);
-=======
-  
-  require('../task/taskRoutes.js')(taskRouter);
-  require('../users/userRoutes.js')(userRouter);
-  require('../taskList/taskRoutes.js')(listRouter);
->>>>>>> trying to manage rebase changes
 
 };
