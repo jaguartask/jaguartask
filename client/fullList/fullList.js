@@ -26,5 +26,13 @@ angular.module('jaguarTask.list', [])
   //could ideally be stored on factory/service or at least referenced in the state params/search
   $scope.msg = "Welcome to the list controller";
   $scope.basicTaskKeys = ["notes","done",  "created", "dueDate", "priority"];
-  
+  $scope.appliedClass= function(prop){
+    var className = "task_" + prop;
+    return className;
+  };
+  $(document).ready(function(){
+    $(".task_name").forEach(function(node){
+
+    }).append("<a href='#'>some Description</a>");//how to generate url?
+  })
 }]);
