@@ -50,6 +50,14 @@ angular.module('jaguarTask', [
       data: {
         requiresLogin: true //set to false to make route accessible to everyone
       }
+    })
+    .state('app', {
+      url: '/app',
+      templateUrl: 'jtapp/jtapp-partial.html',
+      controller: 'AppPageController',
+      data: {
+        requiresLogin: false //set to false to make route accessible to everyone
+      }
     });
 
   // gets jwt token from local storage

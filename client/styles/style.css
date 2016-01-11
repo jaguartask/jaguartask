@@ -1,3 +1,6 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
 .main {
 	padding-top: 90px;
 	padding-bottom: 25px;
@@ -5,4 +8,78 @@
 
 .listView {
   margin: 70px;
+}
+
+/* app styles */
+.jtapp-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+.jtapp-layout .jtapp-header .mdl-textfield {
+  padding: 0px;
+  margin-top: 41px;
+}
+.jtapp-layout .jtapp-header .mdl-textfield .mdl-textfield__expandable-holder {
+  bottom: 19px;
+}
+.jtapp-layout .mdl-layout__header .mdl-layout__drawer-button {
+  color: rgba(0, 0, 0, 0.54);
+}
+.mdl-layout__drawer .avatar {
+  margin-bottom: 16px;
+}
+.jtapp-drawer {
+  border: none;
+}
+/* iOS Safari specific workaround */
+.jtapp-drawer .mdl-menu__container {
+  z-index: -1;
+}
+.jtapp-drawer .jtapp-navigation {
+  z-index: -2;
+}
+/* END iOS Safari specific workaround */
+.jtapp-drawer .mdl-menu .mdl-menu__item {
+  display: flex;
+  align-items: center;
+}
+.jtapp-drawer-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+.jtapp-avatar-user {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.jtapp-navigation {
+  flex-grow: 1;
+}
+.jtapp-layout .jtapp-navigation .mdl-navigation__link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+.jtapp-layout .jtapp-navigation .mdl-navigation__link:hover {
+  background-color: #00BCD4;
+  color: #37474F;
+}
+.jtapp-navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+
+.jtapp-content {
+  max-width: 1080px;
 }
