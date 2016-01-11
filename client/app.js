@@ -6,9 +6,10 @@ angular.module('jaguarTask', [
   'jaguarTask.main',
   'jaguarTask.list',
   'jaguarTask.login',
-  'jaguarTask.register',
   'jaguarTask.jtapp',
   'jaguarTask.test'
+  'jaguarTask.task',
+  'jaguarTask.register'
 ])
 .config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
 	
