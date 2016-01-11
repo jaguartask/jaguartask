@@ -10,7 +10,7 @@ angular.module('jaguarTask.register', [])
       data: $scope.user
     }).then(function(response) {
       store.set('jwt', response.data.id_token);
-      $state.go('home');
+      $state.go('app.main');
     }, function(error) {
       alert(error.data);
     });
