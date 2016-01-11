@@ -30,9 +30,5 @@ angular.module('jaguarTask.list', [])
     var className = "task_" + prop;
     return className;
   };
-  $(document).ready(function(){
-    $(".task_name").forEach(function(node){
 
-    }).append("<a href='#'>some Description</a>");//how to generate url?
-  })
 }]);
