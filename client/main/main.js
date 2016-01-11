@@ -1,6 +1,6 @@
 angular.module('jaguarTask.main', [])
 
-.controller('MainController', function($scope){
+.controller('MainController', function($scope, $http){
   $scope.dummyData = [
     {
       id: 1,
@@ -38,7 +38,19 @@ angular.module('jaguarTask.main', [])
     }];
   $scope.currentListData = $scope.dummyData[1];
   $scope.basicTaskKeys = ["done", "dueDate", "priority"];
-  $scope.statusChange = function(){
+  $scope.updateStatus = function(event){
+    // var currentTask = function(){
+    //   $scope.dummyData.forEach(function(task){
+    //     if(task.id === id){
+    //       return task;
+    //     }
+    //   });
+    //   console.log("could not find task with that ID", id);
+    // }
+    console.log("context ID", event);
+    // $http("/task/:" + id, {
+
+    // });
   };
   
 });
