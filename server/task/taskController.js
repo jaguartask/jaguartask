@@ -16,18 +16,45 @@ module.exports = {
       title: req.body.title,
       // notes: req.body.notes,
       done: req.body.done,
-      listId: 5
+      // lists: req.body.listId
       // dueDate: req.body.dueDate,
       // priority: req.body.priority
       // list: id
     })
       .save()
+      .then(function(task) {
+        var result = [];
+        return List.findOne({title: req.body.listTitle}).exec()
+          .then(function(list) {
+            return [task, list];
+          });
+      })
       .then(function(result) {
-        console.log(result);
+       if(!result[1]) {
+        new List({title: req.body.listTitle})
+        .save()
+        .then(function(res) {
+         var id = result[0]._id;
+         res.tasks.push(id)
+         res.save()
+        }).then(null, function(err) {
+          console.log(err.toJSON());
+        })
+       } else {
+         var id = result[0]._id;
+         result[1].tasks.push(id)
+         result[1].save()
+        } 
+       return result;
+      })
+      .then(function(result) {
+        result[0].lists.push(result[1]._id);
+        result[0].save();
       })
       .then(null, function(err) {
         console.log("err :", err);
-      })
+      });
+
   },
 
   delete: function(req, res, next){
