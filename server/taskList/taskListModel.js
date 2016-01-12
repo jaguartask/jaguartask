@@ -1,15 +1,17 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
 var taskListSchema = new mongoose.Schema({
 
-  taskId: [{type: Schema.Types.ObjectId, ref: 'task'}],
+  tasks: {
+   type: Array,
+   required: false,
+  },
 
-  title:{
+  title: {
     type: String,
-    required: true
+    required: true,
   }
 
 });
 
-module.exports = mongoose.model('lists', taskListSchema);
+module.exports = mongoose.model('taskList', taskListSchema);
