@@ -94,3 +94,6 @@ html, body {
 ul {
     list-style-type: none;
 }
+.taskDisplay {
+  margin: 0px 50px;
+}
