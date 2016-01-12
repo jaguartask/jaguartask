@@ -30,32 +30,35 @@ module.exports = {
           });
       })
       .then(function(result) {
+        // console.log('beggining :', result);
        if(!result[1]) {
-        new List({title: req.body.listTitle})
-        .save()
-        .then(function(res) {
-         var id = result[0]._id;
-         res.tasks.push(id)
-         res.save()
-        }).then(null, function(err) {
-          console.log(err.toJSON());
+         new List({title: req.body.listTitle})
+           .save()
+           .then(function(res) {
+            var id = result[0]._id;
+            res.tasks.push(id)
+            res.save()
+           })
+           .then(null, function(err) {
+            console.log(err.toJSON());
+             })
+         } else {
+           var id = result[0]._id;
+           result[1].tasks.push(id)
+           result[1].save()
+          }
+         return result;
         })
-       } else {
-         var id = result[0]._id;
-         result[1].tasks.push(id)
-         result[1].save()
-        } 
-       return result;
-      })
-      .then(function(result) {
-        result[0].lists.push(result[1]._id);
-        result[0].save();
-      })
-      .then(null, function(err) {
-        console.log("err :", err);
-      });
-
-  },
+        .then(function(result) {
+          console.log(result);
+          result[0].lists.push(result[1]._id);
+          result[0].save();
+          res.json({taskIsSaved: true});
+        })
+        .then(null, function(err) {
+          console.log("err :", err);
+        });
+    },
 
   delete: function(req, res, next){
 
