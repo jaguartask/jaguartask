@@ -9,7 +9,7 @@
 <h1> Tasks list <span ng-show="tasks">: {{tasks.name}}</span></h1>
 <p ng-hide="tasks"> No task selected</p>
 <div ng-show="tasks" class="taskDisplay">
-  <form ng-submit="addTask(index, newTaskName, newTaskDetails)">
+  <form ng-submit="addTask(index, newTaskName, newTaskDetails, newTaskLowPriority)">
 
   	<input type="text" ng-model="newTaskName" placeholder="enter a task to add">
 
@@ -21,7 +21,7 @@
 
     Priority: 
 
-    <input type="radio" id="radioHigh" name="priority" value="off" class="mdl-radio__button">
+    <input type="radio" id="radioHigh" name="priority" value="off" class="mdl-radio__button" ng-model="newTaskLowPriority">
     <span class="mdl-radio__label">Low</span>
 
     <input type="radio" id="radioHigh" name="priority" value="off" class="mdl-radio__button">
