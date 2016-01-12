@@ -14,6 +14,13 @@ var UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
+  lists: {
+    type: Array,
+    required: true,
+  }
+
+
 });
 
 UserSchema.pre('save', function(next) {
