@@ -9,7 +9,8 @@ angular.module('jaguarTask', [
   'jaguarTask.jtapp',
   'jaguarTask.test',
   'jaguarTask.task',
-  'jaguarTask.register'
+  'jaguarTask.register',
+  'jaguarTask.simple'
 ])
 .config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
 	
@@ -20,6 +21,7 @@ angular.module('jaguarTask', [
   $urlRouterProvider.otherwise('/home/index');
 
   $stateProvider
+
   	.state('homepage', {
     	url: '/home',
     	templateUrl: 'home/home-partial.html',
@@ -27,7 +29,9 @@ angular.module('jaguarTask', [
   	})
   	.state('homepage.index', {
   		url: '/index',
-      templateUrl: 'home/home-index-partial.html'
+      //templateUrl: 'home/home-index-partial.html'
+      templateUrl: 'simpleFrontEnd/simpleFrontEnd.html',
+      controller: 'simpleCtrl'
   	})
     .state('homepage.login', {
       url: '/login',
