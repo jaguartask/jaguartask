@@ -1,6 +1,6 @@
 angular.module('jaguarTask.test', [])
 
-.controller('testController', function($scope, testListsFactory, $http) {
+.controller('testController', function($scope, testListsFactory) {
 	$scope.lists = testListsFactory.getLists();
 	testListsFactory.add({name: 'test1', tasks: ['task1', 'task2']});
 
@@ -35,20 +35,9 @@ angular.module('jaguarTask.test', [])
 		return lists[index];
 	}
 
-	var addTask = function(index, name, details, lowPriority) {
+	var addTask = function(index, task) {
 		lists[index].tasks = lists[index].tasks || [];
-		var newTaskPriority = "high";
-		if( lowPriority.checked ){
-			newTaskPriority= "low"
-		};
-		var newTask = {
-			name: name,
-			details: details,
-			priority: newTaskPriority
-		}
-		lists[index].tasks.push(name);
-		$http.post('/api/task', newTask); //TODO: verify this api is right
-																			//and sends proper obj (including create date)
+		lists[index].tasks.push(task);
 	}
 
 	var deleteList = function(index) {

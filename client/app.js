@@ -49,8 +49,8 @@ angular.module('jaguarTask', [
     })
     .state('app.main', {
       url: '/main',
-      templateUrl: 'main/main.html',
-      controller: 'MainController',
+      templateUrl: 'test/test-partial.html',
+      controller: 'testController',
       data: {
         requiresLogin: false //set to false to make route accessible to everyone
       }
