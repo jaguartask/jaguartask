@@ -2,19 +2,16 @@
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
-    <h1>List View</h1>
+    <h1>Task View</h1>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-      Create List
+      Share Task
     </button>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-      Share List
-    </button>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-      Delete List
+      Delete Task
     </button>
   </div>
 
-
+{{ msg }}
   <div class="list">
     <h2>{{ list.name }}</h2>
       <div class="taskName" >
@@ -22,10 +19,7 @@
           <li ng-repeat="task in list.tasks">
             <h3>{{ task.name}}</h3>
             <div ng-repeat="key in basicTaskKeys">
-          
-              <div ng-class="appliedClass('task', key)">
-                {{ key }} : {{ task[key] }}
-              </div>
+              {{ key }} : {{ task[key] }}
           </li>
         </ul>
       </div>

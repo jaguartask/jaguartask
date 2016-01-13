@@ -1,6 +1,6 @@
 angular.module('jaguarTask.main', [])
 
-.controller('MainController', function($scope){
+.controller('MainController', function($scope, $http){
   $scope.dummyData = [
     {
       id: 1,
@@ -37,6 +37,38 @@ angular.module('jaguarTask.main', [])
       ]
     }];
   $scope.currentListData = $scope.dummyData[1];
+
   $scope.basicTaskKeys = ["done", "dueDate", "priority"];
+
+  var findTaskByID = function(targetID){
+      var result;
+      $scope.dummyData.forEach(function(list){
+        list.tasks.forEach(function(task){
+          console.log("checking task id:", task.id);
+          if(task.id === targetID){
+            result = task;
+          }
+        });
+      });
+      return result;
+    };
+
+  console.log(findTaskByID(3));
+
+  $scope.updateStatus = function(id){
+    console.log("clicked task", id);
+
+    var currentTask = findTaskByID(id);
+
+    if(currentTask.done){
+      console.log('changing status to not done');
+      currentTask.done = false;
+    } else {
+      console.log('changing status to done');
+      currentTask.done = true;
+    }
+    console.log("currentTask", currentTask);
+    // $http("/api/task", currentTask); TODO: use/correct this when api is ready
+  };
   
 });

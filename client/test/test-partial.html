@@ -12,6 +12,7 @@
 	<input type="text" ng-model="task" placeholder="enter a task to add">
 	<button ng-click="addTask(index, task)">Add</button>
 </div>
-<ul ng-show="tasks">
+
+<ul ng-show ="tasks">
 	<li ng-repeat="task in tasks.tasks">{{task}}</li>
 </ul>

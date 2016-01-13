@@ -6,9 +6,11 @@ angular.module('jaguarTask', [
   'jaguarTask.main',
   'jaguarTask.list',
   'jaguarTask.login',
-  'jaguarTask.register',
   'jaguarTask.jtapp',
-  'jaguarTask.test'
+  'jaguarTask.test',
+  'jaguarTask.task',
+  'jaguarTask.register',
+  'jaguarTask.simple'
 ])
 .config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
 	
@@ -19,6 +21,7 @@ angular.module('jaguarTask', [
   $urlRouterProvider.otherwise('/home/index');
 
   $stateProvider
+
   	.state('homepage', {
     	url: '/home',
     	templateUrl: 'home/home-partial.html',
@@ -26,7 +29,9 @@ angular.module('jaguarTask', [
   	})
   	.state('homepage.index', {
   		url: '/index',
-      templateUrl: 'home/home-index-partial.html'
+      //templateUrl: 'home/home-index-partial.html'
+      templateUrl: 'simpleFrontEnd/simpleFrontEnd.html',
+      controller: 'simpleCtrl'
   	})
     .state('homepage.login', {
       url: '/login',
@@ -48,8 +53,8 @@ angular.module('jaguarTask', [
     })
     .state('app.main', {
       url: '/main',
-      templateUrl: 'main/main.html',
-      controller: 'MainController',
+      templateUrl: 'test/test-partial.html',
+      controller: 'testController',
       data: {
         requiresLogin: false //set to false to make route accessible to everyone
       }
