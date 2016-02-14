@@ -13,8 +13,8 @@ angular.module('jaguarTask.task', [])
         created: "1/6/2015",
         done: true
       }]
-    }; //TODO: switch for real task data, which
-  //could ideally be stored on factory/service or at least referenced in the state params/search
+    };
+  
   $scope.msg = "Welcome to the task controller";
   $scope.basicTaskKeys = ["notes","done",  "created", "dueDate", "priority"];
   
