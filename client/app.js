@@ -1,8 +1,8 @@
 angular.module('jaguarTask', [
-	'ui.router',
+  'ui.router',
   'angular-jwt',
   'angular-storage',
-	'jaguarTask.home',
+  'jaguarTask.home',
   'jaguarTask.main',
   'jaguarTask.list',
   'jaguarTask.login',
@@ -17,7 +17,6 @@ angular.module('jaguarTask', [
   $urlRouterProvider.when('', '/home/index');
   $urlRouterProvider.when('/', '/home/index');
   $urlRouterProvider.when('/app', '/app/main');
-  //unmatch path return to homepage
   $urlRouterProvider.otherwise('/home/index');
 
   $stateProvider
