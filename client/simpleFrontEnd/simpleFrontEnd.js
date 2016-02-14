@@ -9,4 +9,4 @@ angular.module('jaguarTask.simple', [])
   return {
     factoryMsg: "this is from the factory"
   }
-})
+});
