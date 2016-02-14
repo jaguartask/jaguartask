@@ -1,24 +1,24 @@
 <div class="mdl-grid mdl-typography--text-center">
   <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
-  	<h1>Register</h1>
-  	<form>
-  		<p>
-	  	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	  	    <input class="mdl-textfield__input" type="email" id="email" ng-model="user.email">
-	  	    <label class="mdl-textfield__label" for="email" >Email address</label>
-	  	    <span class="mdl-textfield__error">Enter a valid email address</span>
-	  	  </div>
-  	  </p>
-  	  <p>
-	  	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	  	    <input class="mdl-textfield__input" type="password" id="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-	  	    <label class="mdl-textfield__label" for="Password">Password</label>
-	  	    <span class="mdl-textfield__error">Password should contain at least 8 letters, uppercase, lowercase letters and number or special character.</span>
-	  	  </div>
-  	  </p>
-  	  <p>
-  	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" ng-click="register()">Register</button>
-  	  </p>
-  	</form>
+    <h1>Register</h1>
+    <form>
+      <p>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="email" id="email" ng-model="user.email">
+          <label class="mdl-textfield__label" for="email" >Email address</label>
+          <span class="mdl-textfield__error">Enter a valid email address</span>
+        </div>
+      </p>
+      <p>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="password" id="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+          <label class="mdl-textfield__label" for="Password">Password</label>
+          <span class="mdl-textfield__error">Password should contain at least 8 letters, uppercase, lowercase letters and number or special character.</span>
+        </div>
+      </p>
+      <p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" ng-click="register()">Register</button>
+      </p>
+    </form>
   </div>
 </div>
