@@ -15,4 +15,4 @@ angular.module('jaguarTask.register', [])
       alert(error.data);
     });
   }
-})
+});
