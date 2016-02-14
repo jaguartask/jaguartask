@@ -68,7 +68,6 @@ angular.module('jaguarTask.main', [])
       currentTask.done = true;
     }
     console.log("currentTask", currentTask);
-    // $http("/api/task", currentTask); TODO: use/correct this when api is ready
   };
   
 });
