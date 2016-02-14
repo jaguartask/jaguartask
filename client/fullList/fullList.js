@@ -22,8 +22,8 @@ angular.module('jaguarTask.list', [])
         done: false
       }
       ]
-    }; //TODO: switch for real list data, which
-  //could ideally be stored on factory/service or at least referenced in the state params/search
+    }; 
+
   $scope.msg = "Welcome to the list controller";
   $scope.basicTaskKeys = ["notes","done",  "created", "dueDate", "priority"];
   $scope.appliedClass= function(elt, prop){
