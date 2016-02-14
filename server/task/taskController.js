@@ -30,7 +30,6 @@ module.exports = {
           });
       })
       .then(function(result) {
-        // console.log('beggining :', result);
        if(!result[1]) {
          new List({title: req.body.listTitle})
            .save()
