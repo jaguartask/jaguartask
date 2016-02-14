@@ -1,18 +1,18 @@
 <div>
-	<input type="text" ng-model="listName" placeholder="new list name">
-	<button ng-click="createList(listName)">Create</button>
+  <input type="text" ng-model="listName" placeholder="new list name">
+  <button ng-click="createList(listName)">Create</button>
 </div>
 <ul>
-	<li ng-repeat="list in lists"><span ng-click="displayTasks($index)">{{list.name}}</span><span ng-click="deleteList($index)">   [delete]</span></li>
+  <li ng-repeat="list in lists"><span ng-click="displayTasks($index)">{{list.name}}</span><span ng-click="deleteList($index)">   [delete]</span></li>
 </ul>
 <hr />
 <h1> Tasks list <span ng-show="tasks">: {{tasks.name}}</span></h1>
 <p ng-hide="tasks"> No task selected</p>
 <div ng-show="tasks">
-	<input type="text" ng-model="task" placeholder="enter a task to add">
-	<button ng-click="addTask(index, task)">Add</button>
+  <input type="text" ng-model="task" placeholder="enter a task to add">
+  <button ng-click="addTask(index, task)">Add</button>
 </div>
 
 <ul ng-show ="tasks">
-	<li ng-repeat="task in tasks.tasks">{{task}}</li>
+  <li ng-repeat="task in tasks.tasks">{{task}}</li>
 </ul>
