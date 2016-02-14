@@ -1,5 +1,5 @@
 angular.module('jaguarTask.home', [])
 
-  .controller('HomePageController', function($scope){
+.controller('HomePageController', function($scope){
    
 });
